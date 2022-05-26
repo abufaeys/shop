@@ -34,13 +34,8 @@ struct Item: Codable, Hashable ,Identifiable {
        name = try values.decode(String.self, forKey: .name)
         price = try values.decode(String.self, forKey: .price)
         let dateString:String = try values.decodeIfPresent(String.self, forKey: .createdAt) ?? ""
-        if dateString.isNotEmpty {
-            createdAt = dateString.count > 10 ? String(dateString.prefix(9)) : ""
-          } else {
-              throw DecodingError.dataCorruptedError(forKey: .createdAt,
-                    in: values,
-                    debugDescription: "Date string is Empty.")
-          }
+        createdAt = dateString.count > 10 ? String(dateString.prefix(10)) : ""
+         
 
         imageIDS = try values.decodeIfPresent(Array.self, forKey: .imageIDS)
         imageUrls = try values.decodeIfPresent(Array.self, forKey: .imageUrls)
