@@ -11,6 +11,7 @@ protocol NetworkEnvironment {
     var scheme : String { get }
     var baseUrl: String { get }
     var `default`: String { get }
+    var isEnabledNetworkMock: Bool { get }
 }
 
 struct NetworkConfig {
@@ -20,11 +21,20 @@ struct NetworkConfig {
         let scheme = "https"
         let baseUrl = "ey3f2y0nre.execute-api.us-east-1.amazonaws.com/"
         let `default` =  "default/dynamodb-writer"
+        let isEnabledNetworkMock = false
     }
 
+    struct Mock: NetworkEnvironment {
+        var scheme: String = ""
+        var baseUrl: String = ""
+        var `default`: String = ""
+        let isEnabledNetworkMock = true
+    }
+    
     struct Production: NetworkEnvironment {
         let scheme = "https"
         let baseUrl = "https://ey3f2y0nre.execute-api.us-east-1.amazonaws.com/"
         let `default` =  "default/dynamodb-writer"
+        let isEnabledNetworkMock = false
     }
 }

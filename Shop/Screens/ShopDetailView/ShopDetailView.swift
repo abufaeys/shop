@@ -23,7 +23,7 @@ struct ShopDetailView: View {
                 
                 VStack(alignment: .center, spacing: 10) {
                     
-                    ShopRemoteImage(urlString: item.imageUrls?[0] ?? "")
+                    ShopRemoteImage(urlString: Helper.RetrieveFirstItemHasData(arr: item.imageUrls))
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 300, height: 300)
                     

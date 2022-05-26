@@ -25,7 +25,10 @@ final class NetworkManager {
     ///
     /// - Parameter completed: Whether or not we succeeded in fetching data from the api.
     func getShop(completed: @escaping (Result<[Item], ShopError>) -> Void) {
-        
+        if NetworkConfig.current.isEnabledNetworkMock{
+            completed(.success(MockData.items))
+            return
+        }
         guard let url = URL(string: `default`) else {
             
             completed(.failure(.invalidURL))
@@ -81,7 +84,10 @@ final class NetworkManager {
     ///   - urlString: The url of the api where we get our data from.
     ///   - completed: Whether or not we succeeded from downloading an image from the api.
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
-        
+        guard urlString.isNotEmpty else{
+            completed(nil)
+            return
+        }
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {

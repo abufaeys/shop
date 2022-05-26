@@ -39,7 +39,7 @@ struct Item: Codable, Hashable ,Identifiable {
           } else {
               throw DecodingError.dataCorruptedError(forKey: .createdAt,
                     in: values,
-                    debugDescription: "Date string does not match format expected by formatter.")
+                    debugDescription: "Date string is Empty.")
           }
 
         imageIDS = try values.decodeIfPresent(Array.self, forKey: .imageIDS)
