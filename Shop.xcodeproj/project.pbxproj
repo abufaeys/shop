@@ -35,6 +35,7 @@
 		8176C1EE28402168000F7DBB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176C1ED28402163000F7DBB /* Item.swift */; };
 		8176C1EF2840216B000F7DBB /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176C1EC28402163000F7DBB /* Shop.swift */; };
 		8176C1F128402BA6000F7DBB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176C1F028402BA6000F7DBB /* String+Extension.swift */; };
+		8176C1F328402DFA000F7DBB /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176C1F228402DFA000F7DBB /* NetworkConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		8176C1EC28402163000F7DBB /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		8176C1ED28402163000F7DBB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8176C1F028402BA6000F7DBB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8176C1F228402DFA000F7DBB /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				8176C1C828401FD9000F7DBB /* MockData.swift */,
+				8176C1F228402DFA000F7DBB /* NetworkConfig.swift */,
 				8176C1C928401FD9000F7DBB /* NetworkManager.swift */,
 			);
 			path = Managers;
@@ -307,6 +310,7 @@
 				8176C1E92840208C000F7DBB /* Helper.swift in Sources */,
 				8176C1D22840201D000F7DBB /* DateFormatter+Extension.swift in Sources */,
 				8176C1DF28402052000F7DBB /* ShopButton.swift in Sources */,
+				8176C1F328402DFA000F7DBB /* NetworkConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,9 @@ final class NetworkManager {
     static let shared = NetworkManager()
     private let cache = NSCache<NSString, UIImage>()
     
-    static let baseURL = "https://ey3f2y0nre.execute-api.us-east-1.amazonaws.com/"
-    private let `default` = baseURL + "default/dynamodb-writer"
+    static let baseURL =  "\(NetworkConfig.current.scheme)://\(NetworkConfig.current.baseUrl)"
+
+    private let `default` = baseURL + NetworkConfig.current.`default`
     
     private init() {}
         
