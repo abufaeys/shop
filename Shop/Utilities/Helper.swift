@@ -17,7 +17,7 @@ struct Helper{
     /// - Parameter arr:  Array of URL String .
     static func RetrieveFirstItemHasData(arr:[String?]?) -> String {
         return (arr?.first(where: { image in
-            if let image = image,!image.isEmpty{
+            if let image = image,image.isNotEmpty{
                 return true
             }
             return false

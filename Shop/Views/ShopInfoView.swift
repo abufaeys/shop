@@ -21,7 +21,7 @@ struct ShopInfoView: View {
             
             Text(Strings.price) + Text(item.price).foregroundColor(.brandPrimary)
             
-            if let createdAt = item.createdAt , !createdAt.isEmpty{
+            if let createdAt = item.createdAt , createdAt.isNotEmpty{
                 Text(Strings.CreatedAt + ": ") + Text(createdAt).foregroundColor(.brandPrimary)
             }
             

@@ -38,7 +38,7 @@ struct ShopListCell: View {
                         .cornerRadius(10)
                     
                 }
-                if let createdAt = item.createdAt,!createdAt.isEmpty{
+                if let createdAt = item.createdAt,createdAt.isNotEmpty{
                     Text(Strings.CreatedAt + ": " + createdAt )
                     .foregroundColor(.secondary)
                     .fontWeight(.semibold)

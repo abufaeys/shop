@@ -34,8 +34,9 @@ struct Item: Codable, Hashable ,Identifiable {
        name = try values.decode(String.self, forKey: .name)
         price = try values.decode(String.self, forKey: .price)
         let dateString:String = try values.decodeIfPresent(String.self, forKey: .createdAt) ?? ""
-        if dateString.count > 10 {
-            createdAt = String(dateString.prefix(9))
+        if dateString.isEmpty {
+            
+            createdAt = dateString.count > 10 ? String(dateString.prefix(9)) : ""
           } else {
               throw DecodingError.dataCorruptedError(forKey: .createdAt,
                     in: values,

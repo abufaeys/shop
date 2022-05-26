@@ -68,6 +68,7 @@ struct ShopHomeView: View {
         
     }
     
+    /// Fetch shop items from server again .
     var refresh: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             
@@ -84,6 +85,7 @@ struct ShopHomeView: View {
         
     }
     
+    /// switch between grid and list view .
     var switchCellType: some ToolbarContent {
         
         ToolbarItem(placement: .navigationBarTrailing) {
