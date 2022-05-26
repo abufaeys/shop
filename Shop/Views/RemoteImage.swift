@@ -11,7 +11,10 @@ import SwiftUI
 final class ImageLoader: ObservableObject {
     
     @Published var image: Image? = nil
-        
+    
+    /// Downloads  an image from the api
+    /// - Parameters:
+    ///   - urlString: The url of the api where we get our data from.
     func load(fromURLString urlString: String) {
         
         NetworkManager.shared.downloadImage(fromURLString: urlString) { uiImage in
